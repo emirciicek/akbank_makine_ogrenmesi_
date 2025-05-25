@@ -35,8 +35,8 @@ GridSearchCV ile farklı parametre kombinasyonlarını deneyip, en iyisini otoma
 F1 skoru seçimi ise kritik çünkü doğruluk (accuracy) dengesiz verilerde yanıltıcı olabiliyor. Mesela sınıflar eşit değilse yüksek accuracy elde etmek kolay ama model aslında iyi çalışmıyor olabilir. F1 skoru hem precision hem recall’a bakıyor, yani dengeli ve gerçek performansı gösteriyor. O yüzden F1’i optimize etmek daha mantıklı.
 
 Kısacası, bu sayede modelim hem dengeli hem de sağlam sonuçlar veriyor.
-  
-Ek olarak model başarısını sadece doğrulukla değil, özellikle "No-show" olan hastaları doğru yakalama oranı (recall) ile ölçtüm. Çünkü amaç, gelmeyen hastaları mümkün olduğunca kaçırmamak.
+
+Model başarısını sadece doğrulukla değil, özellikle "No-show" olan hastaları doğru yakalama oranı (recall) ile ölçtüm. Çünkü amaç, gelmeyen hastaları mümkün olduğunca kaçırmamak.
 
 ---
 
