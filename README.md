@@ -28,7 +28,13 @@ Randevu günü ile kayıt gününün farkını gösteren yeni bir değişken (`D
 Farklı modeller denedim:
 
 - Logistic Regression ile temel bir tahmin modeli oluşturdum.
-- Random Forest ile hem default parametrelerle hem de GridSearchCV ile optimize edilmiş haliyle performans karşılaştırması yaptım.
+- Random Forest ile hem default parametrelerle hem de GridSearchCV ile optimize edilmiş haliyle performans karşılaştırması yaptım. Sebebi, modelin performansını gerçekten artırmak istememdi. Random Forest gibi modellerde, n_estimators, max_depth gibi parametreler doğrudan sonuçları etkiliyor ve yanlış seçimle ya aşırı basitleştirip modeli zayıflatabiliyorsun ya da aşırı öğrenip gereksiz karmaşık hale getirebiliyorsun.
+
+GridSearchCV ile farklı parametre kombinasyonlarını deneyip, en iyisini otomatik olarak seçiyorum. Böylece hem zaman kazanıyorum hem de daha güvenilir bir model elde ediyorum.
+
+F1 skoru seçimi ise kritik çünkü doğruluk (accuracy) dengesiz verilerde yanıltıcı olabiliyor. Mesela sınıflar eşit değilse yüksek accuracy elde etmek kolay ama model aslında iyi çalışmıyor olabilir. F1 skoru hem precision hem recall’a bakıyor, yani dengeli ve gerçek performansı gösteriyor. O yüzden F1’i optimize etmek daha mantıklı.
+
+Kısacası, bu sayede modelim hem dengeli hem de sağlam sonuçlar veriyor.
   
 Model başarısını sadece doğrulukla değil, özellikle "No-show" olan hastaları doğru yakalama oranı (recall) ile ölçtüm. Çünkü amaç, gelmeyen hastaları mümkün olduğunca kaçırmamak.
 
