@@ -36,7 +36,7 @@ F1 skoru seçimi ise kritik çünkü doğruluk (accuracy) dengesiz verilerde yan
 
 Kısacası, bu sayede modelim hem dengeli hem de sağlam sonuçlar veriyor.
   
-Model başarısını sadece doğrulukla değil, özellikle "No-show" olan hastaları doğru yakalama oranı (recall) ile ölçtüm. Çünkü amaç, gelmeyen hastaları mümkün olduğunca kaçırmamak.
+Ek olarak model başarısını sadece doğrulukla değil, özellikle "No-show" olan hastaları doğru yakalama oranı (recall) ile ölçtüm. Çünkü amaç, gelmeyen hastaları mümkün olduğunca kaçırmamak.
 
 ---
 
